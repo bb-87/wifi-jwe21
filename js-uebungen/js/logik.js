@@ -148,4 +148,4 @@ let example1 = 'hui';
     console.log(example1);
 }
 
-console.log(example1);
+// console.log(example1);
