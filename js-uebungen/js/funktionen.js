@@ -6,11 +6,6 @@ function sayMyName(name) {
     }
 }
 
-sayMyName('Bernhard');
-sayMyName('Manuel');
-sayMyName('Thomas');
-sayMyName(userNameFromDatabase);
-
 function checkMyInput(input)  {
     if(typeof input == 'string') {
         // console.log('yes, it is a string');
@@ -20,3 +15,10 @@ function checkMyInput(input)  {
         return false;
     }
 }
+
+sayMyName('Bernhard');
+sayMyName('Manuel');
+sayMyName('Thomas');
+sayMyName(userNameFromDatabase);
+
+let ergebnisMeinerFunktion = sayMyName('Jasmin');
