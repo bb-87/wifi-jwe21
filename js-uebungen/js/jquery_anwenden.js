@@ -16,3 +16,38 @@ $('#calc').click(
         $('#result').val(result);
     }
 );
+
+
+$('#events').on(
+    {
+        'mouseenter': function() {
+            $(this).css(
+                {
+                    'background-color': 'yellow',
+                    'color': 'red'
+                }
+            );
+        },
+
+        'mouseleave': function() {
+            $(this).css(
+                {
+                    'background-color': 'blue',
+                    'color': 'white'
+                }
+            );
+        }
+    }
+);
+
+$('#events2').on(
+    {
+        'mouseenter': function() {
+            $(this).addClass('mouseover');
+        },
+
+        'mouseleave': function() {
+            $(this).removeClass('mouseover');
+        }
+    }
+);
