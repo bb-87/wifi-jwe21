@@ -49,7 +49,6 @@ $('#gallery a').click(
 // bei Klick auf span X hide-Klasse wieder entfernen
 $('#lightbox span').click(
     function(event) {
-        event.preventDefault();
         lightboxContainer.addClass('hide');
     }
 );
