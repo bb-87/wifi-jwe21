@@ -46,9 +46,29 @@ $('#gallery a').click(
     }
 );
 
+// bei Klick neben Bild hide-Klasse hinzufügen
+lightboxContainer.click(function(e) {
+
+    let image = lightboxContainer.find('img');
+
+    if(!$(e.target).is(image)) {
+        lightboxContainer.addClass('hide'); 
+    }
+});
+
+/*
 // bei Klick auf span X hide-Klasse wieder entfernen
-$('#lightbox span').click(
+$('#lightbox span.close').click(
     function(event) {
         lightboxContainer.addClass('hide');
     }
 );
+*/
+
+// Ausblenden des Lightbox Containers beim Drücken der ESC Taste
+$(document).keyup(function(e) {
+    // Keycode für Escape
+    if(e.keyCode == 27) {
+        lightboxContainer.addClass('hide'); 
+    }
+});
