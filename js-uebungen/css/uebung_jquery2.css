@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+}
+
+#btn {
+    position: fixed;
+    top: 1.5rem;
+    left: 5vw;
+    width: 250px;
+    height: 30px;
+}
+
+#box {
+    position: fixed;
+    top: 4rem;
+    left: 5vw;
+    width: 0px;
+    height: 0px;
+    background-color: darkred;
+    color: #000;
+    font-size: 170px;
+    text-align: center;
+    line-height: 230px;
+    box-shadow: 0 0 10px 0 #292929;
+    transition: border-radius 500ms linear;
+}
+
+#box.circle {
+    border-radius: 50%;
+}
+
+p {
+    font-size: 30px;
+    color: #333;
+}
