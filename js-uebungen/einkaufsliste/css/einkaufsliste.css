@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #333;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+header img {
+    margin: 5vh 0;
+    border: 5px solid #333;
+    border-radius: 50%;
+    box-shadow: rgba(51, 51, 51, 0.19) 0px 10px 20px, rgba(51, 51, 51, 0.23) 0px 6px 6px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#input_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input_form button {
+    margin-left: 15px;
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 600px;
+    background-color: #db5f1c;
+    min-height: 100vh;
+}
+
+#item-count {
+    text-align: center;
+    margin: 2vh 0;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.check-btn {
+    margin: 0 15px;
+    width: 32px;
+    height: 32px;
+    border: 1px dashed;
+    background-color: #db5f1c;
+    cursor: pointer;
+}
+
+.check-btn:focus {
+    outline: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #333;
+}
+
+.remove-btn {
+    margin: 0 15px;
+    width: 32px;
+    height: 32px;
+    border: 1px dashed;
+    background-color: #db5f1c;
+    cursor: pointer;
+}
+
+.remove-btn:focus {
+    outline: 0;
+}

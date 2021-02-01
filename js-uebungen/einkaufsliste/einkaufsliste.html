@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste mit jQuery</title>
+
+    <link rel="stylesheet" href="css/einkaufsliste.css">
+</head>
+
+<body>
+    <div class="inner-wrapper">
+        <header>
+            <img src="img/shp-cart.png" alt="Illustration of a shopping cart">
+            <h1>Einkaufsliste</h1>
+        </header>
+
+        <div id="input_form">
+            <input type="text" id="shp_value">
+            <button id="shp_btn">Artikel hinzufügen</button>
+        </div>
+
+        <div id="item-count">
+            <!-- content injected by jQuery -->
+        </div>
+
+        <ul id=shp_list>
+            <!-- content injected by jQuery -->
+        </ul>
+    </div>  
+
+    <!--
+        #   "Artikelname"-Input
+        #   "Neuer Artikel"-Button (oder für die Nerds: mit Enter)
+        #   Ausgabe der Liste (zu beginn leer)
+    -->
+
+    <!-- 
+        1. Funktion: Hinzufügen eines neuen Artikels  
+            => keine Artikel ohne Namen
+            NERDS:
+            
+            =>  Kein Artikel doppelt möglich
+            =>  Artikelanzahl
+    -->
+
+    <!-- 
+        2. Funktion: Abhaken eines gekauften Artikels   
+    -->
+
+    <!-- 
+        3. Funktion: Entfernen eines Artikels 
+        $('#artikel_1').remove();
+    -->
+
+    <script src="js/vendor/jquery-3.5.1.js"></script>
+    <script src="js/einkaufsliste.js"></script>
+</body>
+</html>
