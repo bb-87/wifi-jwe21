@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen - WIFI Salzburg</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+    <!-- In der Praxis einen HTML5 table generator verwenden (google it) -->
+    <table class="beautiful">
+        <thead>
+            <tr> <!-- <tr> = table rows -->
+                <th class="txt-left">Zeitraum</th> <!-- <td> = table header -->
+                <th>Preis</th>
+                <th class="txt-left">Zimmer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">31. August - 19. November</td> <!-- table data -->
+                <td>€ 240 p.P. / Nacht</td>
+                <td>Familien Suite</td>
+            </tr>
+            <tr>
+                <!-- rowspan von 1. Zeile -->
+                <td>€ 240 p.P. / Nacht</td> <!-- table data -->
+                <td>Familien Suite</td>
+            </tr>
+            <tr>
+                <td>2. Jänner - 30. August</td> <!-- table data -->
+                <td class="deal">€ 200 p.P. / Nacht</td>
+                <td>Familien Suite</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="txt-center" colspan="3"><small>Hinweis zu dieser Tabelle in informativer Form</small></td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <table class="special-design">
+        <thead>
+            <tr> <!-- <tr> = table rows -->
+                <th>Zeitraum</th> <!-- <td> = table header -->
+                <th>Preis</th>
+                <th>Zimmer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">31. August - 19. November</td> <!-- table data -->
+                <td>€ 240 p.P. / Nacht</td>
+                <td>Familien Suite</td>
+            </tr>
+            <tr>
+                <!-- rowspan von 1. Zeile -->
+                <td>€ 240 p.P. / Nacht</td> <!-- table data -->
+                <td>Familien Suite</td>
+            </tr>
+            <tr>
+                <td>2. Jänner - 30. August</td> <!-- table data -->
+                <td>€ 240 p.P. / Nacht</td>
+                <td>Familien Suite</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><small>Hinweis zu dieser Tabelle in informativer Form</small></td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <table class="simple">
+        <tr>
+            <td id="worst-day">Montag</td>
+            <td>Dienstag</td>
+            <td>Mittwoch</td>
+            <td>Donnerstag</td>
+            <td>Freitag</td>
+            <td class="best-day">Samstag</td>
+            <td class="best-day">Sonntag</td>
+        </tr>
+        <tr>
+            <td>frei</td>
+            <td>frei</td>
+            <td>frei</td>
+            <td>frei</td>
+            <td>frei</td>
+            <td>frei</td>
+            <td>frei</td>
+        </tr>
+    </table>
+</body>
+</html>

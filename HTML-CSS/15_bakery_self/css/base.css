@@ -1,0 +1,77 @@
+:root {
+    --brown: #D0B085;
+    --grey: #707070;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/josefin-sans-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    font-size: 110%;
+}
+
+* {
+    /* dont't forget the box model */
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+
+.text-with-button {
+    text-align: center;
+}
+
+.btn {
+    padding: 20px 25px;
+    border: 2px solid;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-soft {
+    color: var(--brown);
+    border-color: var(--brown);
+}
+
+.btn-hard {
+    color: #FFF;
+    border-color: var(--brown);
+    background-color: var(--brown);
+}
+
+#top .inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-box {
+    color: var(--grey);
+}

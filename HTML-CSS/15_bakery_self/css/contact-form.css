@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Josefin Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/josefin-sans-v12-latin-700.woff2') format('woff2'), 
+         url('../fonts/josefin-sans-v12-latin-700.woff') format('woff'); 
+  }
+
+.contact-form h2 {
+    font-family: 'Josefin Sans Light';
+    color: var(--grey);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 70px 0 50px 0;
+}
+
+.contact-form input[type=radio] {
+    margin: 0 20px 0 2px;
+}
+
+.contact-form label {
+    color: var(--grey);
+}
+
+.contact-form input[type=text],
+input[type=email],
+input[type=date],
+#message-form {
+    width: 100%;
+    border: 1px solid var(--brown);
+    margin-top: 3px;
+}
+
+label[for=privacy] {
+    font-size: 0.7em;
+}
+
+label[for=privacy] > a {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+.address-box {
+    display: none;
+}
+
+.contact-form iframe {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .contact-form h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-form label {
+        font-family: 'Josefin Sans Bold';
+    }
+
+    label[for=privacy] {
+        font-family: 'Josefin Sans';
+    }
+}

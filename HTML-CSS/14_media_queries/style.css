@@ -1,0 +1,48 @@
+img {
+    /* img soll nicht breiter als viewport sein */
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: yellow;
+}
+
+.tablet,
+.desktop {
+    display: none;
+}
+
+/* tablet size */
+@media (min-width: 440px) {
+    h1 {
+        color: orange;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }   
+}
+
+/* desktop size*/
+@media (min-width: 1200px) {
+    h1 {
+        color: red;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
+
+/* ab 1200px width gelten BEIDE media queries als erfüllt */
+

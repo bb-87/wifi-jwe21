@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strukturierung einer HTML Seite - WIFI Salzburg</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="website-header">
+            <a href="index.html">
+                <img src="http://placehold.it/150x150?text=LOGO" alt="Logo Firmenname">
+            </a>
+        </header>
+
+        <main>
+            
+            <!-- CONTENT ELEMENT BEGIN -->
+            <section class="blog-teaser">
+                <header>
+                    <h2>Ende von Corona in Sicht Mitte Dezember 2020</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Minus corrupti iure animi optio quae molestiae cumque nostrum est provident? Similique?
+                </p>
+                <footer>
+                    <div class="author">Bernhard Berger</div>
+                </footer>
+            </section>
+            <!-- CONTENT ELEMENT END -->
+            
+        </main>
+
+        <!-- weiterführender Content BEGIN -->
+        <aside class="additional-content">
+            <div id="weather-widget">
+                <strong>Das aktuelle Wetter: </strong><br>
+                <img src="img/weather.svg" alt="" width="75"> 22 °C 
+                <!-- https://de.wikipedia.org/wiki/Creative_Commons Bildrechte beachten -->
+            </div>
+        </aside>
+        <!-- weiterführender Content END -->
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>Kontakt</li>
+                    <li>Impressum</li>
+                    <li>AGB</li>
+                </ul>
+            </nav>
+
+            <div class="copyright">
+                <small>&copy; 2020 by BestDevEver.org</small>
+            </div>
+        </footer>
+
+    </div>
+        
+</body>
+</html>
