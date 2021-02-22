@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Arrays in PHP</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays in PHP</title>
+    </head>
 
-  <body>
-      <?php
+    <body>
+        <?php
         // Numerisches Array definieren (Index ist integer)
         $namen = array("Katharina", "Jonathan", "Julia", "Peter");
         // "Julia und Katharina" ausgeben
@@ -31,9 +31,9 @@
 
         // Assoziatives Array definieren (Index ist string)
         $person = array(
-          "name" => "Max", // name = index, Max = value
-          "alter" => 47, // Jeder Datentyp kann im Array enthalten sein!
-          "ort" => "Salzburg"
+            "name" => "Max", // name = index, Max = value
+            "alter" => 47, // Jeder Datentyp kann im Array enthalten sein!
+            "ort" => "Salzburg"
         );
         // Ausgabe: Max (47) aus Salzburg
         echo "{$person["name"]} ({$person["alter"]}) aus {$person["ort"]}";
@@ -45,11 +45,15 @@
 
         // Mehrdimensionales Array (verschachteln)
         $personen = array(
-          array("name" => "Herbert",
+            array(
+                "name" => "Herbert",
                 "alter" => 33,
-                "ort" => array("Heimat" => "Linz", "Ausbildung" => "Wien", "Freundschaft" => "Graz")),
-          array("name" => "Sarah",
-                "alter" => 27)
+                "ort" => array("Heimat" => "Linz", "Ausbildung" => "Wien", "Freundschaft" => "Graz")
+            ),
+            array(
+                "name" => "Sarah",
+                "alter" => 27
+            )
         );
 
         echo "<pre>";
@@ -69,6 +73,6 @@
 
         // Ausgabe: Herbert aus Linz arbeitet in Wien
         echo "{$personen[0]["name"]} aus {$personen[0]["ort"]["Heimat"]} arbeitet in {$personen[0]["ort"]["Ausbildung"]}";
-      ?>
-  </body>
+        ?>
+    </body>
 </html>

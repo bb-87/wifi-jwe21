@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Variablen mit PHP</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Variablen mit PHP</title>
+    </head>
 
-  <body>
-      <h1>Variablen mit PHP</h1>
+    <body>
+        <h1>Variablen mit PHP</h1>
 
-      <?php
+        <?php
         // Ganzzahl (integer) definieren und ausgeben
         $alter = 33;
         echo "Ich bin ";
@@ -59,6 +59,6 @@
         // Neue Schreibweise
         const datenbank2 = "jwd_21";
         echo datenbank2;
-      ?>
-  </body>
+        ?>
+    </body>
 </html>
