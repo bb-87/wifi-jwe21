@@ -13,8 +13,9 @@ $('#shp_btn').click(function() {
 
         $(shpListUnique).each(function(index, element) {
             shpListItem += `<li><button class="check-btn"><img src="img/check.png" alt="checkmark icon"></button>${element}<button class="remove-btn"><img src="img/remove.png" alt="remove icon"></button></li>`;
-            $('#shp_list').html(shpListItem);
         });
+
+        $('#shp_list').html(shpListItem);
     } else {
         console.warn('Artikel ohne Namen können nicht hinzugefügt werden!');
     }
@@ -38,8 +39,9 @@ inputField.keyup(function(e) {
 
             $(shpListUnique).each(function(index, element) {
                 shpListItem += `<li><button class="check-btn"><img src="img/check.png" alt="checkmark icon"></button>${element}<button class="remove-btn"><img src="img/remove.png" alt="remove icon"></button></li>`;
-                $('#shp_list').html(shpListItem);
             });
+
+            $('#shp_list').html(shpListItem);
         } else {
             console.warn('Artikel ohne Namen können nicht hinzugefügt werden!');
         }
@@ -52,10 +54,13 @@ inputField.keyup(function(e) {
     }
 });
 
+// needs fix! (count of <li> elements instead?)
 function itemCount() {
     if (shpListUnique.length > 0) {
         let itemCountVal = shpListUnique.length;
         $('#item-count').html(`Anzahl der Artikel: ${itemCountVal}`);
+    } else {
+        $('#item-count').html('');
     }
 }
 
