@@ -1,23 +1,26 @@
 // Queue
-const queue = [];
 
-function enqueue(element) {
-    queue.push(element);
-}
+// const queue = [];
 
-function dequeue() {
-    return queue.shift();
-}
+// function enqueue(element) {
+//     queue.push(element);
+// }
+
+// function dequeue() {
+//     return queue.shift();
+// }
+
+let queue = new Queue('Queue', ' - '); // new Queue() ruft code unter constructor bei Klasse Queue auf 
 
 function onEnqueueButtonClick() {
     const elem = document.querySelector('#enqueue-value').value;
 
-    enqueue(elem);
+    queue.enqueue(elem);
     showQueue();
 }
 
 function onDequeueButtonClick() {
-    const elem = dequeue();
+    const elem = queue.dequeue();
 
     const output = document.querySelector('#dequeue-value');
 
@@ -38,24 +41,33 @@ function showQueue() {
     showDataStructure('queue', queue);
 }
 
+/** Klassen-Dokumentation (welcher Datentyp wird erwartet)
+ * 
+ * @param {string} id The ID of the HTML element
+ * @param {List} data_structure The data structure to show (object of class List)
+ */
 function showDataStructure(id, data_structure) {
     const div = document.querySelector('#' + id);
-    div.querySelector('.output').textContent = id + ": " + data_structure.join(', ');
+    div.querySelector('.output').textContent = data_structure.toString();
 }
 
 document.querySelector('#enqueue-button').addEventListener('click', onEnqueueButtonClick);
 document.querySelector('#dequeue-button').addEventListener('click', onDequeueButtonClick);
 
+
 // Stack
-const stack = [];
 
-function push(element) {
-    stack.push(element);
-}
+// const stack = [];
 
-function pop() {
-    return stack.pop();
-}
+// function push(element) {
+//     stack.push(element);
+// }
+
+// function pop() {
+//     return stack.pop();
+// }
+
+let stack = new Stack('Stack', ' | ');
 
 function showStack() {
     showDataStructure('stack', stack);
@@ -64,12 +76,12 @@ function showStack() {
 function onPushButtonClick() {
     const inputVal = document.querySelector('#push-value').value;
 
-    push(inputVal);
+    stack.push(inputVal);
     showStack();
 }
 
 function onPopButtonClick() {
-    const elem = pop();
+    const elem = stack.pop();
 
     const output = document.querySelector('#pop-value');
 
