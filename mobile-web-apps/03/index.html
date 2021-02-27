@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zufallsliste</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Zufallsliste</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Erzeugung</h2>
+            <label>Minimum: <input type="number" id="min-value"></label>
+            <label>Maximum: <input type="number" id="max-value"></label>
+            <label>Anzahl: <input type="number" id="length"></label>
+            <button id="generate">Erzeuge eine Liste</button>
+            <div id="generate-output"></div>
+        </section>
+        
+        <section>
+            <h2>Suche</h2>
+            <label>Suchwert: <input type="number" id="search-value"></label>
+            <button id="search">Suche</button>
+            <div id="search-output"></div>
+        </section>
+    </main>
+    
+    <script src="js/random-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

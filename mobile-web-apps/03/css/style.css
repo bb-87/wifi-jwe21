@@ -1,0 +1,22 @@
+h1,
+h2 {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 840px;
+    padding: .5em;
+}
+
+section {
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 1px solid #ccc;
+}
+
+section label {
+    display: block;
+    width: 30em;
+    margin-bottom: 1em;
+}
