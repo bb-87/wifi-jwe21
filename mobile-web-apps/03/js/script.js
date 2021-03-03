@@ -14,16 +14,21 @@ function onGenerateClick() {
 }
 function onSearchClick() {
     const searchVal = parseInt(document.querySelector('#search-value').value);
+
+    let start = performance.now();
     const isInList = randomList.isInList(searchVal);
+    const isInListTime = performance.now() - start;
+
     const output = document.querySelector('#search-output');
 
     if (isInList) {
         start = performance.now();
         const n = randomList.count(searchVal);
         const countTime = performance.now() - start;
-        output.textContent = searchVal + " wurde " + n + "x gefunden. Suchdauer: " + countTime + " ms";
+        
+        output.textContent = `${searchVal} wurde ${n}x gefunden. countTime: ${countTime} ms, isInListTime: ${isInListTime}`;
     } else {
-        output.textContent = searchVal + " wurde nicht gefunden.";
+        output.textContent = `${searchVal} wurde nicht gefunden.`;
     }
 }
 
