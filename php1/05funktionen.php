@@ -50,7 +50,7 @@
         echo mb_strlen($text2);
         echo "<br>";
 
-        // Teil aus einem Text entfernen (hier: 43)
+        // Gibt Teil aus einem Text zurück (hier: 43)
         $text = "Ich bin 43 Jahre alt.";
         echo substr($text, 8, 2); // string, offset, length
         echo "<br>";
