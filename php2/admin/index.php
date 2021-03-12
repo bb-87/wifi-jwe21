@@ -1,4 +1,7 @@
 <?php 
+include "funktionen.php";
+isLoggedIn();
+
 include "header.php";
 ?>
 
