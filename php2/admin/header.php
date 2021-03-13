@@ -11,7 +11,8 @@
     <nav>
         <ul>
             <li><a href="index.php">Start</a></li>
-            <li><a href="zutaten_liste.php">Zutaten</a></li>
+            <li><a href="zutaten_list.php">Zutaten</a></li>
+            <li><a href="rezepte_list.php">Rezepte</a></li>
             <li><a href="logout.php">Ausloggen</a> (Eingeloggt als <?php echo $_SESSION["benutzername"]; ?>)</li>
         </ul>
     </nav>
