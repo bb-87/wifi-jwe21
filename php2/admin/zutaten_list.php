@@ -1,21 +1,22 @@
 <?php
-include "funktionen.php";
+include "functions.php";
 isLoggedIn();
 
 include "header.php";
 ?>
 
     <h1>Zutaten</h1>
+    <p><a href="zutaten_new.php">Neue Zutat anlegen</a></p>
 
-    <?php 
-    $result = mysqli_query($db, "SELECT * FROM zutaten ORDER BY titel ASC");
-
+    <?php
+    $result = query("SELECT * FROM zutaten ORDER BY titel ASC");
 
     echo "<table border='1'>";
     echo "<thead>
         <tr>
             <th>Titel</th>
             <th>KCal</th>
+            <th>Optionen</th>
         <tr>
     </thead>
     <tbody>";
@@ -24,6 +25,10 @@ include "header.php";
         echo "<tr>";
         echo "<td>{$row["titel"]}</td>";
         echo "<td>{$row["kcal_pro_100"]}</td>";
+        echo "<td>
+                  <a href='zutaten_edit.php?id={$row["id"]}'>Bearbeiten</a> - 
+                  <a href='zutaten_del.php?id={$row["id"]}'>Entfernen</a>
+              </td>";
         echo "</tr>";
     }
     echo "</tbody></table>";
