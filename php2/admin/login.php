@@ -1,5 +1,5 @@
 <?php
-include "funktionen.php";
+include "functions.php";
 
 // Wurde das Formular abgeschickt?
 if (!empty($_POST)) {
@@ -9,14 +9,11 @@ if (!empty($_POST)) {
     } else {
         // Benutzer und Passwort wurden übergeben
 
-        // Daten von Formularen/Benutzer ($_GET und $_POST) IMMER (!!!) mit mysqli_real_escape_string behandeln,
-        // bevor sie in DB-Befehlen verwendet werden.
-        // SQL injection verhindern: https://www.php.net/mysqli_real_escape_string
-        $sql_benutzername = mysqli_real_escape_string($db, $_POST["benutzername"]);
+        // SQL injection verhindern
+        $sql_benutzername = escape($_POST["benutzername"]);
 
         // DB fragen, ob der eingegebene Benutzer existiert
-        // https://www.php.net/mysqli_query + https://www.php.net/mysqli_error
-        $result = mysqli_query($db, "SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'") or die(mysqli_error($db));
+        $result = query("SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'");
 
         // Einen Datensatz aus MySQL in ein PHP-Array umwandeln
         // https://www.php.net/mysqli_fetch_assoc - numerisches Array: https://www.php.net/mysqli_fetch_row
@@ -32,7 +29,7 @@ if (!empty($_POST)) {
                 $_SESSION["benutzername"] = $row["benutzername"];
 
                 // Letztes Login & Anzahl der Logins in DB speichern
-                mysqli_query($db, "UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'");
+                query("UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'");
 
                 // Umleitung ins Admin-System
                 // https://www.php.net/manual/en/function.header.php
