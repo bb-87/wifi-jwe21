@@ -19,6 +19,7 @@ include "header.php";
         <tr>
     </thead>
     <tbody>";
+    // Nach und nach alle Ergebnis-Datensätze umwandeln. Egal wieviele.
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>{$row["titel"]}</td>";

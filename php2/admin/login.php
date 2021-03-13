@@ -38,8 +38,6 @@ if (!empty($_POST)) {
                 // https://www.php.net/manual/en/function.header.php
                 header("Location: index.php");
                 exit; // nachfolgender code wird nicht mehr ausgeführt
-
-                // echo "<pre>"; print_r($row); echo "</pre>";
             } else {
                 // Passwort ist falsch -> Fehlermeldung
                 $error = "Benutzername oder Passwort war falsch.";
