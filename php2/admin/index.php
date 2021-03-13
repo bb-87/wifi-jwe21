@@ -1,5 +1,5 @@
 <?php 
-include "funktionen.php";
+include "functions.php";
 isLoggedIn();
 
 include "header.php";
