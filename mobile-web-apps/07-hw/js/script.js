@@ -1,6 +1,6 @@
 // Chat API: https://github.com/allesmi/mobile-web-apps-2021/blob/main/src/07/README.md
 
-function getMessages(event) {
+function getMessages() {
     fetch('https://test.sunbeng.eu/api/messages')
     .then(function(response) {
         if (response.ok) {
@@ -20,21 +20,24 @@ function getMessages(event) {
             const name = message.name;
             const text = message.text;
 
-            li.innerHTML = `${timestamp} - <strong>${name}:</strong> ${text}`;
+            li.textContent = `${timestamp} - ${name}: ${text}`;
 
             ul.appendChild(li);
         }
+    })
+    .catch(function (error) {
+        console.log(error);
     });
 }
 
-function postMessage(event) {
+function postMessage() {
     const inputName = document.querySelector('#input-name').value;
     const inputMsg = document.querySelector('#input-msg').value;
 
     const postMsg = {
         name: inputName,
         text: inputMsg
-    }
+    };
 
     fetch('https://test.sunbeng.eu/api/messages', {
         method: 'POST',
@@ -44,9 +47,18 @@ function postMessage(event) {
         body: JSON.stringify(postMsg)
     })
     .then(function(response) {
-        console.log(response);
+        if (response.ok) {
+            getMessages();
+        } else {
+            throw new Error('Error posting message');
+        }
+    })
+    .catch(function(error) {
+        console.log(error);
     });
 }
 
 document.querySelector('#output-btn').addEventListener('click', getMessages);
 document.querySelector('#input-btn').addEventListener('click', postMessage);
+
+// TODO: parse timestamp
