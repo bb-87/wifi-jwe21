@@ -16,11 +16,15 @@ function getMessages() {
 
         for (let message of messages) {
             const li = document.createElement('li');
-            const timestamp = message.timestamp;
             const name = message.name;
             const text = message.text;
 
-            li.textContent = `${timestamp} - ${name}: ${text}`;
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+            const timestamp = Date.parse(message.timestamp);
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
+            const dateFormat = new Intl.DateTimeFormat('en-AT', {dateStyle: 'long', timeStyle: 'medium'}).format(timestamp);
+
+            li.textContent = `${dateFormat} - ${name}: ${text}`;
 
             ul.appendChild(li);
         }
@@ -29,6 +33,8 @@ function getMessages() {
         console.log(error);
     });
 }
+
+setInterval(getMessages, 5000);
 
 function postMessage() {
     const inputName = document.querySelector('#input-name').value;
@@ -48,6 +54,8 @@ function postMessage() {
     })
     .then(function(response) {
         if (response.ok) {
+            document.querySelector('#input-name').value = '';
+            document.querySelector('#input-msg').value = '';
             getMessages();
         } else {
             throw new Error('Error posting message');
@@ -60,5 +68,3 @@ function postMessage() {
 
 document.querySelector('#output-btn').addEventListener('click', getMessages);
 document.querySelector('#input-btn').addEventListener('click', postMessage);
-
-// TODO: parse timestamp
