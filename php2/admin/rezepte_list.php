@@ -6,12 +6,12 @@ include "header.php";
 ?>
 
     <h1>Rezepte</h1>
-    <p><a href="rezepte_neu.php">Neues Rezept anlegen</a></p>
+    <p><a href="rezepte_new.php">Neues Rezept anlegen</a></p>
 
     <?php 
     // Zwei Tabellen miteinander joinen, damit nur eine DB Abfrage gemacht werden muss
     $result = query("SELECT rezepte.*, benutzer.benutzername  
-        FROM rezepte JOIN benutzer ON rezepte.benutzer_id = benutzer.id 
+        FROM rezepte LEFT JOIN benutzer ON rezepte.benutzer_id = benutzer.id 
         ORDER BY rezepte.titel ASC");
 
     echo "<table border='1'>";
