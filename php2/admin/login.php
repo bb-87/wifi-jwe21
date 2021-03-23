@@ -27,6 +27,7 @@ if (!empty($_POST)) {
                 // Passwort ist auch korrekt -> login merken -> cookie setzen mit:
                 $_SESSION["eingeloggt"] = true;
                 $_SESSION["benutzername"] = $row["benutzername"];
+                $_SESSION["benutzer_id"] = $row["id"];
 
                 // Letztes Login & Anzahl der Logins in DB speichern
                 query("UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'");

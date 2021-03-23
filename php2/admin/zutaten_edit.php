@@ -60,7 +60,7 @@ include "header.php";
         echo "<a href='zutaten_list.php'>Zurück zur Liste</a></p>";
     }
 
-    // DB nach Zusatz-Datensatz fragen (zur Vorausfüllung)
+    // DB nach Zutat-Datensatz fragen (zur Vorausfüllung)
     $sql_id = escape($_GET["id"]);
     $result = query("SELECT * FROM zutaten WHERE id = '{$sql_id}'");
     $row = mysqli_fetch_assoc($result);
@@ -74,7 +74,8 @@ include "header.php";
                 type="text" 
                 name="titel" 
                 id="titel" 
-                value="<?php if (!empty($_POST["titel"]) && !$success) { 
+                value="<?php 
+                    if (!empty($_POST["titel"]) && !$success) { 
                         echo htmlspecialchars($_POST["titel"]);
                     } else {
                         echo htmlspecialchars($row["titel"]);
@@ -92,7 +93,8 @@ include "header.php";
                 placeholder="(optional)" 
                 name="kcal_pro_100" 
                 id="kcal_pro_100" 
-                value="<?php if (!empty($_POST["kcal_pro_100"]) && !$success) { 
+                value="<?php 
+                    if (!empty($_POST["kcal_pro_100"]) && !$success) { 
                         echo $_POST["kcal_pro_100"]; 
                     } else {
                         echo htmlspecialchars($row["kcal_pro_100"]);
