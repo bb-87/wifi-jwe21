@@ -5,7 +5,7 @@
 ## Inhalt
 
 1. [HTML, CSS & RWD](#1)
-2. [E/A jvS m. jQuery](#2)
+2. [E/A JS m. jQuery](#2)
 3. [WebApps](#3)
 4. [PHP I](#4)
 5. [PHP II](#5)
