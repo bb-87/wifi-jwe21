@@ -12,7 +12,7 @@ class fdb_mysql
 
         // Verbindung zur MySQL-DB aufbauen
         $this->_db = new mysqli(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
-        // Zeichenset mitteilen
+        // Zeichensatz mitteilen
         $this->_db->set_charset("utf8");
     }
 }
