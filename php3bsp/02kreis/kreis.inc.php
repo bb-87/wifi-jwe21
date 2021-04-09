@@ -4,12 +4,13 @@ class kreis
     // Konstante, die fix einer Klasse zugeordnet ist
     const pi = 3.1415926535898;
 
+    // Underscore in Variablennamen deutet auf geschützte Variable hin
     private $_radius;
 
     // https://www.php.net/manual/en/language.oop5.decon.php
     public function __construct($rad)
     {
-        $this->_radius = $rad;
+        $this->set_radius($rad);
     }
 
     // Wird ein Objekt gelöscht - mit unset() oder von PHP beim finalen Aufräumen
