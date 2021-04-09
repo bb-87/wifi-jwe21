@@ -32,7 +32,7 @@ class person
         // Durch diese Methode haben wir die Möglichkeit, Überprüfungen vor  
         // dem Setzen des neuen Namens einzufügen
         if ($name == $this->vorname) {
-            echo "<strong>So heiße ich bereits!";
+            echo "<strong>So heiße ich bereits!</strong>";
         } else {
             $this->vorname = $name;
         }    
