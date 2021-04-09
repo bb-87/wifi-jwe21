@@ -2,14 +2,34 @@
 include_once "setup.php";
 
 if (!empty($_POST)) {
-    //Validierung
+    // Validierung
     $validieren = new fdb_validieren();
     $validieren->ist_ausgefuellt($_POST["benutzername"], "Benutzername");
     $validieren->ist_ausgefuellt($_POST["passwort"], "Passwort");
 
     // Wenn keine Fehler auftreten -> DB nach Benutzer fragen
     if ($validieren->keine_fehler()) {
-        //...
+        $db = fdb_mysql::get_instanz();
+
+        $sql_benutzername = $db->escape($_POST["benutzername"]);
+
+        $result = $db->query("SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'");
+        $benutzer = $result->fetch_assoc();
+
+        // https://www.php.net/manual/en/function.password-verify
+        if (empty($benutzer) || !password_verify($_POST["passwort"], $benutzer["passwort"])) {
+            // Fehler, Benutzer existiert nicht oder Passwort war falsch
+            $validieren->add_error("Benutzername oder Passwort war falsch.");
+        } else {
+            // Benutzer existiert -> Login in Session merken
+            $_SESSION["eingeloggt"] = true;
+            $_SESSION["benutzername"] = $benutzer["benutzername"];
+            $_SESSION["benutzer_id"] = $benutzer["id"];
+
+            // Umleitung ins Admin-System
+            header("Location: index.php");
+            exit;
+        }
     }
 }
 ?><!DOCTYPE html>

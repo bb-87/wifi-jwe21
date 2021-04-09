@@ -18,6 +18,11 @@ class fdb_validieren
         return true;
     }
 
+    public function add_error($fehlermeldung)
+    {
+        $this->_errors[] = $fehlermeldung;
+    }
+
     public function fehler_html()
     {
         if ($this->keine_fehler()) {
