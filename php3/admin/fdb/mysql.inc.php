@@ -1,7 +1,7 @@
 <?php 
 class fdb_mysql
 {
-    // Singleton Implementierung
+    // Singleton Implementierung - https://phpenthusiast.com/blog/the-singleton-design-pattern-in-php
     // Vermeidet mehrfache Erstellung desselben Objektes.
     // Hier gewünscht, um nicht mehrere DB-Verbindungen gleichzeitig zu öffnen.
     private static $_instanz;

@@ -9,4 +9,20 @@ class fdb_marken
         $row = $result->fetch_assoc();
         return new fdb_marke($row);
     }
+
+    /**
+     * Gibt alle Marken alphabetisch sortiert zurück.
+     * @return array Alle Marken als Array mit fdb_marke Objekten darin.
+     */
+    public static function get_all()
+    {
+        $ret = array();
+        $db = fdb_mysql::get_instanz();
+        $result = $db->query("SELECT * FROM marken ORDER BY titel ASC");
+
+        while ($row = $result->fetch_assoc()) {
+            $ret[] = new fdb_marke($row);
+        }
+        return $ret;
+    }
 }

@@ -1,6 +1,8 @@
 <?php
 class fdb_fahrzeug extends fdb_model_row
 {
+    protected $_tabelle = "fahrzeuge";
+
     /**
      * Gibt die Infos zu der Marke des Fahrzeugs zurück.
      * @return fdb_marke Ein Objekt, das die komplette zugeordnete Marke repräsentiert.
